@@ -1,1 +1,1 @@
-ffmpegじゃなくpython-ffmpegをインストールする。
+ffmpeg、python-ffmpegじゃなくffmpeg-pythonをインストールする。
