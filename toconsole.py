@@ -16,7 +16,6 @@ def play_audio(filename):
 def process_video(videofile):
     cap = cv2.VideoCapture(videofile)
     f = [0, 0, 0]
-    now = time.time()
 
     if cap.isOpened():
         os.makedirs('frames', exist_ok=True)
@@ -36,6 +35,7 @@ def process_video(videofile):
         ffmpeg.run(stream)
 
     audio_thread = threading.Thread(target=play_audio, args=('bgm.mp3',))
+    now = time.time()
     audio_thread.start()
     #なんで音声の抽出したらズレるん？他の方法で音声再生すればいいんかもしれんけどわざわざ書き直すんめんどいんやクソが
 
