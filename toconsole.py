@@ -37,7 +37,6 @@ def process_video(videofile):
     audio_thread = threading.Thread(target=play_audio, args=('bgm.mp3',))
     now = time.time()
     audio_thread.start()
-    #なんで音声の抽出したらズレるん？他の方法で音声再生すればいいんかもしれんけどわざわざ書き直すんめんどいんやクソが
 
     while True:
         n = int((time.time() - now) * cv2.VideoCapture(videofile).get(cv2.CAP_PROP_FPS))
